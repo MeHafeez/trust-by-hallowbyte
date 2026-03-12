@@ -3,50 +3,49 @@
 import { GraduationCap, Stethoscope, UtensilsCrossed, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import SectionHeading from "@/components/ui/SectionHeading";
-import { medicalStats, educationStats, foodStats, formatStatPlus } from "@/data/stats";
 
 const pillars = [
   {
     icon: Stethoscope,
     title: "Healthcare Support",
     description:
-      "We cover hospital bills for patients whose families cannot afford life-saving treatments. Every patient deserves a chance at life.",
-    stat: formatStatPlus(medicalStats.patientsHelped),
+      "We aim to cover hospital bills for patients whose families cannot afford life-saving treatments. Every patient deserves a chance at life.",
+    stat: "Coming Soon",
     statLabel: "Patients Helped",
-    gradient: "from-rose-500/10 via-rose-500/5 to-transparent",
-    iconBg: "bg-rose-500/10",
-    iconColor: "text-rose-500",
-    accentColor: "text-rose-500",
+    gradient: "from-primary-600/10 via-primary-600/5 to-transparent",
+    iconBg: "bg-primary-600/10",
+    iconColor: "text-primary-700",
+    accentColor: "text-primary-700",
     href: "/cases/medical",
-    borderGlow: "hover:shadow-rose-500/10",
+    borderGlow: "hover:shadow-primary-700/10",
   },
   {
     icon: GraduationCap,
     title: "Education for All",
     description:
-      "We fund school fees, books, and supplies for children from underprivileged families to ensure no child is denied education.",
-    stat: formatStatPlus(educationStats.childrenEnrolled),
+      "We plan to fund school fees, books, and supplies for children from underprivileged families to ensure no child is denied education.",
+    stat: "Coming Soon",
     statLabel: "Children Enrolled",
-    gradient: "from-blue-500/10 via-blue-500/5 to-transparent",
-    iconBg: "bg-blue-500/10",
-    iconColor: "text-blue-500",
-    accentColor: "text-blue-500",
+    gradient: "from-primary-600/10 via-primary-600/5 to-transparent",
+    iconBg: "bg-primary-600/10",
+    iconColor: "text-primary-700",
+    accentColor: "text-primary-700",
     href: "/cases/education",
-    borderGlow: "hover:shadow-blue-500/10",
+    borderGlow: "hover:shadow-primary-700/10",
   },
   {
     icon: UtensilsCrossed,
     title: "Food Distribution",
     description:
-      "Regular food drives and monthly ration distribution to homeless and poor families, ensuring no one goes hungry.",
-    stat: formatStatPlus(foodStats.mealsServed),
-    statLabel: "Meals Served",
-    gradient: "from-amber-500/10 via-amber-500/5 to-transparent",
-    iconBg: "bg-amber-500/10",
-    iconColor: "text-amber-500",
-    accentColor: "text-amber-500",
+      "Our first initiative! We are distributing food to 100 families this Eid (20th March 2026, In Sha Allah). Join us in making no one go hungry.",
+    stat: "100 Families",
+    statLabel: "Eid Drive Goal",
+    gradient: "from-gold-500/15 via-gold-500/5 to-transparent",
+    iconBg: "bg-gold-500/15",
+    iconColor: "text-gold-600",
+    accentColor: "text-gold-600",
     href: "/cases/food",
-    borderGlow: "hover:shadow-amber-500/10",
+    borderGlow: "hover:shadow-gold-500/10",
   },
 ];
 
@@ -60,7 +59,7 @@ export default function MissionSection() {
           <SectionHeading
             badge="Our Mission"
             title="Three Pillars of Hope"
-            subtitle="We work across three critical areas to uplift families in need and create lasting impact in communities."
+            subtitle="We are building a foundation to uplift families in need across healthcare, education, and food security."
             center
           />
         </div>
@@ -93,7 +92,7 @@ export default function MissionSection() {
 
                 <div className="mt-8 flex items-center justify-between border-t border-gray-100 pt-6">
                   <div>
-                    <p className={`font-display text-3xl font-bold ${pillar.accentColor}`}>
+                    <p className={`font-display text-2xl font-bold ${pillar.accentColor}`}>
                       {pillar.stat}
                     </p>
                     <p className="mt-0.5 text-xs font-medium text-gray-400">

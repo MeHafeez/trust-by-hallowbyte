@@ -34,22 +34,22 @@ const methods = [
     icon: Smartphone,
     label: "UPI Payment",
     detail: "Google Pay, PhonePe, Paytm",
-    color: "from-violet-500/10 to-violet-500/5",
-    iconColor: "text-violet-500",
+    color: "from-primary-600/10 to-primary-600/5",
+    iconColor: "text-primary-700",
   },
   {
     icon: Building2,
     label: "Bank Transfer",
     detail: "Direct NEFT / RTGS / IMPS",
-    color: "from-blue-500/10 to-blue-500/5",
-    iconColor: "text-blue-500",
+    color: "from-primary-600/10 to-primary-600/5",
+    iconColor: "text-primary-700",
   },
   {
     icon: Globe,
     label: "Online Gateway",
     detail: "Credit/Debit Card, Net Banking",
-    color: "from-emerald-500/10 to-emerald-500/5",
-    iconColor: "text-emerald-500",
+    color: "from-gold-500/15 to-gold-500/5",
+    iconColor: "text-gold-600",
   },
 ];
 
@@ -94,7 +94,7 @@ export default function HowToDonateSection() {
         </div>
 
         {/* Payment Methods */}
-        <div className="mt-20 overflow-hidden rounded-[2rem] bg-white p-10 shadow-xl shadow-black/[0.03] ring-1 ring-black/[0.04]">
+        <div className="mt-20 overflow-hidden rounded-[2rem] bg-white p-10 shadow-xl shadow-black/[0.05] ring-1 ring-black/[0.05]">
           <h3 className="text-center font-display text-2xl font-bold text-gray-900">
             Accepted Payment Methods
           </h3>

@@ -16,13 +16,20 @@ import {
 
 const presetAmounts = [500, 1000, 2500, 5000, 10000, 25000];
 
-const bankDetails = {
+const bankDetails: {
+  name: string;
+  account: string;
+  ifsc: string;
+  bank: string;
+  branch: string;
+  upiId: string;
+} = {
   name: "Fatima Rahma Foundation",
   account: "1234567890123456",
   ifsc: "SBIN0001234",
   bank: "State Bank of India",
-  branch: "Mumbai Main Branch",
-  upiId: "fatimarahma@upi",
+  branch: "Guntur Main Branch",
+  upiId: "9885550459@pthdfc",
 };
 
 type PaymentMethod = "upi" | "bank" | "online";
@@ -348,6 +355,18 @@ export default function DonatePage() {
                     {method === "upi" && (
                       <div>
                         <h3 className="font-semibold text-gray-900">UPI Payment</h3>
+                        <div className="mt-4 flex flex-col items-center gap-4">
+                          <div className="overflow-hidden rounded-xl bg-white p-3 shadow-sm">
+                            <Image
+                              src="/images/payment-qr.png"
+                              alt="Scan to pay via UPI"
+                              width={220}
+                              height={220}
+                              className="rounded-lg"
+                            />
+                          </div>
+                          <p className="text-sm font-medium text-gray-700">Scan with any UPI app</p>
+                        </div>
                         <div className="mt-4 flex items-center justify-between rounded-lg bg-white p-4">
                           <div>
                             <p className="text-xs text-gray-500">UPI ID</p>
@@ -365,7 +384,7 @@ export default function DonatePage() {
                           </button>
                         </div>
                         <p className="mt-3 text-xs text-gray-500">
-                          Open any UPI app and send to the above UPI ID.
+                          Open any UPI app and send to the above UPI ID, or scan the QR code.
                         </p>
                       </div>
                     )}

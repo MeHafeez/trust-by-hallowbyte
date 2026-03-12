@@ -52,10 +52,7 @@ const values = [
 ];
 
 const team = [
-  { name: "Founder", role: "Managing Trustee", initials: "FC" },
-  { name: "Dr. Ayesha Khan", role: "Medical Advisory Board", initials: "AK" },
-  { name: "Rahul Verma", role: "Operations Head", initials: "RV" },
-  { name: "Sana Mirza", role: "Volunteer Coordinator", initials: "SM" },
+  { name: "Hafeez Shaik", role: "Founder & Managing Trustee", initials: "HS" },
 ];
 
 export default function AboutPage() {
@@ -92,15 +89,20 @@ export default function AboutPage() {
               Driven by Compassion, Guided by Purpose
             </h2>
             <p className="mt-6 text-lg leading-relaxed text-gray-600">
-              Fatima Rahma Foundation was established with a clear mission — to
-              stand beside families in their most vulnerable moments. We believe
-              access to medical care, education, and food is a basic human right,
-              not a privilege.
+              Fatima Rahma Foundation is a newly established trust with a clear
+              mission — to stand beside families in their most vulnerable
+              moments. We believe access to medical care, education, and food
+              is a basic human right, not a privilege.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-gray-600">
-              What started as a small initiative has grown into a movement that
-              spans healthcare, education, and food security — three pillars
-              that form the foundation of a dignified life.
+              Our first initiative is an Eid Food Distribution Drive on 20th
+              March 2026 (In Sha Allah), where we aim to provide food to 100
+              families in Guntur and Hyderabad. This is just the beginning of a
+              movement spanning healthcare, education, and food security.
+            </p>
+            <p className="mt-4 text-lg leading-relaxed text-gray-600">
+              The foundation is led by <span className="font-semibold text-primary-700">Hafeez Shaik</span>,
+              Founder and Managing Trustee.
             </p>
           </div>
         </div>

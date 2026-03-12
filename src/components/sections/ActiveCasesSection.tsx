@@ -14,9 +14,9 @@ export default function ActiveCasesSection() {
       <div className="container-custom relative">
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <SectionHeading
-            badge="Active Cases"
-            title="People Who Need You"
-            subtitle="Each case is verified by our team. Your donation goes directly to the beneficiary — with full transparency."
+            badge="Current Initiative"
+            title="Support Our First Drive"
+            subtitle="Our Eid food distribution drive is verified and planned. Your donation goes directly to buying food for families in need."
           />
           <Link
             href="/cases"
@@ -27,7 +27,7 @@ export default function ActiveCasesSection() {
           </Link>
         </div>
 
-        <div className="mt-16 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-16 mx-auto max-w-md">
           {featured.map((c) => (
             <CaseCard key={c.id} {...c} />
           ))}

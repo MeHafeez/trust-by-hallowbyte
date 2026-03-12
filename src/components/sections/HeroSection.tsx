@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Heart, Sparkles } from "lucide-react";
 import { useEffect, useState } from "react";
-import { totalCases } from "@/data/cases";
 
 export default function HeroSection() {
   const [visible, setVisible] = useState(false);
@@ -18,10 +18,17 @@ export default function HeroSection() {
     <section className="relative min-h-screen overflow-hidden bg-[#041f13]">
       {/* Layered background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#041f13] via-[#062d1a] to-[#0a3d24]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_50%,rgba(22,101,52,0.3),transparent_60%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,rgba(184,134,11,0.15),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_100%,rgba(22,101,52,0.2),transparent_50%)]" />
+        <Image
+          src="https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?w=1800&q=80"
+          alt="Community support"
+          fill
+          priority
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#03150f]/90 via-[#05251a]/88 to-[#04130f]/95" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_50%,rgba(31,107,71,0.35),transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_20%,rgba(186,141,47,0.16),transparent_50%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_100%,rgba(31,107,71,0.28),transparent_50%)]" />
         <div className="islamic-pattern absolute inset-0 opacity-[0.03]" />
       </div>
 
@@ -44,7 +51,7 @@ export default function HeroSection() {
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
               </span>
               <span className="text-sm font-medium text-white/70">
-                {totalCases} active cases need your support
+                Eid Food Drive — 20th March 2026, In Sha Allah
               </span>
               <Sparkles className="h-3.5 w-3.5 text-gold-400" />
             </div>
@@ -85,8 +92,7 @@ export default function HeroSection() {
           <div style={show(0.35)}>
             <div className="mx-auto mt-8 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.05] px-6 py-3 backdrop-blur-sm">
               <span className="text-base font-medium text-white/60 sm:text-lg">
-                We are supporting <span className="line-through text-white/30">poor</span>{" "}
-                <span className="font-bold text-gold-400">our people</span>
+                Serving people with dignity, compassion, and transparency
               </span>
             </div>
           </div>
@@ -96,6 +102,20 @@ export default function HeroSection() {
               We provide life-saving medical support, quality education, and
               nutritious food to families and communities who need it most.
             </p>
+          </div>
+
+          <div style={show(0.5)}>
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+              <span className="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-gold-300 backdrop-blur-sm">
+                First Initiative
+              </span>
+              <span className="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-white/80 backdrop-blur-sm">
+                Eid Food Drive
+              </span>
+              <span className="rounded-full border border-white/15 bg-white/10 px-4 py-2 text-sm font-semibold text-white/80 backdrop-blur-sm">
+                Goal: 100 Families
+              </span>
+            </div>
           </div>
 
           {/* CTAs */}

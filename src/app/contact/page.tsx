@@ -16,7 +16,7 @@ import {
   Instagram,
   Twitter,
 } from "lucide-react";
-import { impact } from "@/data/stats";
+
 
 const contactInfo = [
   {
@@ -30,17 +30,17 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Call Us",
-    value: "+91 98765 43210",
+    value: "+91 84999 10106",
     detail: "Mon–Sat, 10 AM – 6 PM",
-    href: "tel:+919876543210",
+    href: "tel:+918499910106",
     color: "bg-emerald-500/10 text-emerald-500",
   },
   {
     icon: MessageCircle,
     label: "WhatsApp",
-    value: "+91 98765 43210",
+    value: "+91 84999 10106",
     detail: "Quick responses on WhatsApp",
-    href: "https://wa.me/919876543210?text=Hi%20Fatima%20Care%20Foundation%2C%20I%20have%20a%20query.",
+    href: "https://wa.me/918499910106?text=Hi%20Fatima%20Care%20Foundation%2C%20I%20have%20a%20query.",
     color: "bg-green-500/10 text-green-500",
   },
   {
@@ -112,7 +112,7 @@ export default function ContactPage() {
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-6">
             <a
-              href="https://wa.me/919876543210?text=Hi%20Fatima%20Care%20Foundation"
+              href="https://wa.me/918499910106?text=Hi%20Fatima%20Care%20Foundation"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-green-500 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-green-500/30 transition-all hover:-translate-y-0.5 hover:shadow-xl"
@@ -175,7 +175,7 @@ export default function ContactPage() {
                   If you need immediate help with a medical emergency, reach out directly on WhatsApp for the fastest response.
                 </p>
                 <a
-                  href="https://wa.me/919876543210?text=URGENT%3A%20I%20need%20help%20with%20a%20medical%20case"
+                  href="https://wa.me/918499910106?text=URGENT%3A%20I%20need%20help%20with%20a%20medical%20case"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-4 inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-primary-600 transition-all hover:-translate-y-0.5 hover:shadow-lg"
@@ -192,7 +192,7 @@ export default function ContactPage() {
                 <a href="#" className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-gray-500 transition-colors hover:bg-primary-50 hover:text-primary-500">
                   <Twitter className="h-5 w-5" />
                 </a>
-                <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-gray-500 transition-colors hover:bg-green-50 hover:text-green-500">
+                <a href="https://wa.me/918499910106" target="_blank" rel="noopener noreferrer" className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-100 text-gray-500 transition-colors hover:bg-green-50 hover:text-green-500">
                   <MessageCircle className="h-5 w-5" />
                 </a>
               </div>
@@ -231,7 +231,7 @@ export default function ContactPage() {
                     <div className="grid gap-6 sm:grid-cols-2">
                       <div>
                         <label className="block text-sm font-medium text-gray-700">Phone (optional)</label>
-                        <input type="tel" className="mt-1.5 w-full rounded-xl border border-gray-200 px-4 py-3 text-sm transition-colors focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500" placeholder="+91 98765 43210" />
+                        <input type="tel" className="mt-1.5 w-full rounded-xl border border-gray-200 px-4 py-3 text-sm transition-colors focus:border-primary-500 focus:outline-none focus:ring-1 focus:ring-primary-500" placeholder="+91 84999 10106" />
                       </div>
                       <div>
                         <label className="block text-sm font-medium text-gray-700">Subject</label>
@@ -300,7 +300,7 @@ export default function ContactPage() {
       <section className="bg-primary-500 py-14">
         <div className="container-custom text-center">
           <h2 className="font-display text-2xl font-bold text-white sm:text-3xl">
-            Join {impact.volunteers}+ Volunteers Making a Difference
+            Join Our Growing Family of Volunteers
           </h2>
           <p className="mx-auto mt-3 max-w-xl text-primary-100">
             Be part of a movement. Whether you donate, volunteer, or spread the word — every action counts.

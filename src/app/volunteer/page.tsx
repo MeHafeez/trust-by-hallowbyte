@@ -41,11 +41,7 @@ const benefits = [
   "Networking with like-minded changemakers",
 ];
 
-const testimonials = [
-  { name: "Aisha Khan", role: "Medical Verifier", quote: "Visiting hospitals and meeting patients changed my perspective. I feel I'm truly making a difference.", city: "Hyderabad" },
-  { name: "Rohit Sharma", role: "Food Drive Lead", quote: "Leading the monthly ration drive for 50+ families is the most fulfilling part of my week.", city: "Guntur" },
-  { name: "Priya Nair", role: "Education Mentor", quote: "Teaching kids in the community school gives me joy like nothing else. Their smiles are my reward.", city: "Guntur" },
-];
+const testimonials: { name: string; role: string; quote: string; city: string }[] = [];
 
 const steps = [
   { num: "01", title: "Apply Online", desc: "Fill out the volunteer form below. Takes less than 2 minutes." },
@@ -90,11 +86,11 @@ export default function VolunteerPage() {
           <div className="mt-8 flex flex-wrap items-center justify-center gap-8 text-white/70">
             <div className="flex items-center gap-2">
               <Users className="h-5 w-5" />
-              <span>{impact.volunteers}+ Active Volunteers</span>
+              <span>{impact.volunteers}+ Volunteers</span>
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="h-5 w-5" />
-              <span>15+ Cities</span>
+              <span>2 Cities</span>
             </div>
             <div className="flex items-center gap-2">
               <Clock className="h-5 w-5" />
@@ -107,7 +103,7 @@ export default function VolunteerPage() {
               Apply Now
             </a>
             <a
-              href="https://chat.whatsapp.com/YOUR_GROUP_INVITE_LINK"
+              href="https://chat.whatsapp.com/GzKNWhriOs65UCA8RffEMP?mode=gi_t"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-full bg-green-500 px-8 py-4 text-sm font-semibold text-white shadow-lg shadow-green-500/25 transition-all hover:-translate-y-0.5 hover:shadow-xl"
@@ -172,42 +168,43 @@ export default function VolunteerPage() {
         </div>
       </section>
 
-      {/* Volunteer Stories */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <div className="text-center">
-            <span className="inline-block rounded-full bg-primary-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary-500">
-              Volunteer Stories
-            </span>
-            <h2 className="mt-4 font-display text-3xl font-bold text-gray-900 sm:text-4xl">
-              Hear From Our Volunteers
-            </h2>
-          </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
-            {testimonials.map((t) => (
-              <div key={t.name} className="rounded-2xl bg-gray-50 p-7 ring-1 ring-gray-100">
-                <div className="flex gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-4 w-4 text-gold-400 fill-gold-400" />
-                  ))}
-                </div>
-                <blockquote className="mt-4 text-sm leading-relaxed text-gray-600 italic">
-                  &ldquo;{t.quote}&rdquo;
-                </blockquote>
-                <div className="mt-5 flex items-center gap-3 border-t border-gray-200 pt-5">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-primary-500 to-primary-600 text-xs font-bold text-white">
-                    {t.name.charAt(0)}
+      {testimonials.length > 0 && (
+        <section className="section-padding bg-white">
+          <div className="container-custom">
+            <div className="text-center">
+              <span className="inline-block rounded-full bg-primary-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary-500">
+                Volunteer Stories
+              </span>
+              <h2 className="mt-4 font-display text-3xl font-bold text-gray-900 sm:text-4xl">
+                Hear From Our Volunteers
+              </h2>
+            </div>
+            <div className="mt-12 grid gap-6 md:grid-cols-3">
+              {testimonials.map((t) => (
+                <div key={t.name} className="rounded-2xl bg-gray-50 p-7 ring-1 ring-gray-100">
+                  <div className="flex gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-4 w-4 text-gold-400 fill-gold-400" />
+                    ))}
                   </div>
-                  <div>
-                    <p className="font-display text-sm font-bold text-gray-900">{t.name}</p>
-                    <p className="text-xs text-gray-500">{t.role} · {t.city}</p>
+                  <blockquote className="mt-4 text-sm leading-relaxed text-gray-600 italic">
+                    &ldquo;{t.quote}&rdquo;
+                  </blockquote>
+                  <div className="mt-5 flex items-center gap-3 border-t border-gray-200 pt-5">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-primary-500 to-primary-600 text-xs font-bold text-white">
+                      {t.name.charAt(0)}
+                    </div>
+                    <div>
+                      <p className="font-display text-sm font-bold text-gray-900">{t.name}</p>
+                      <p className="text-xs text-gray-500">{t.role} · {t.city}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* Benefits + Form */}
       <section id="apply" className="section-padding bg-warm-50">
@@ -245,7 +242,7 @@ export default function VolunteerPage() {
                   Get real-time updates, coordinate with the team, and be the first to know about upcoming drives and events.
                 </p>
                 <a
-                  href="https://chat.whatsapp.com/YOUR_GROUP_INVITE_LINK"
+                  href="https://chat.whatsapp.com/GzKNWhriOs65UCA8RffEMP?mode=gi_t"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-4 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-green-600 transition-all hover:-translate-y-0.5 hover:shadow-lg"
@@ -269,7 +266,7 @@ export default function VolunteerPage() {
                     contact you within 48 hours.
                   </p>
                   <a
-                    href="https://chat.whatsapp.com/YOUR_GROUP_INVITE_LINK"
+                    href="https://chat.whatsapp.com/GzKNWhriOs65UCA8RffEMP?mode=gi_t"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-6 inline-flex items-center gap-2 rounded-full bg-green-500 px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all hover:-translate-y-0.5"

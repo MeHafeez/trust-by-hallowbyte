@@ -1,11 +1,12 @@
-import ImpactCounter from "@/components/ui/ImpactCounter";
-import { impact } from "@/data/stats";
+"use client";
 
-const stats = [
-  { end: impact.livesImpacted, suffix: "+", label: "Lives Impacted", prefix: "" },
-  { end: impact.fundsDistributedLakhs, suffix: "L+", label: "Funds Distributed", prefix: "₹" },
-  { end: impact.childrenEducated, suffix: "+", label: "Children Educated", prefix: "" },
-  { end: impact.volunteers, suffix: "+", label: "Volunteers", prefix: "" },
+import { UtensilsCrossed, Users, MapPin, Rocket } from "lucide-react";
+
+const goals = [
+  { icon: UtensilsCrossed, value: "100", label: "Families to Feed", detail: "Our Eid food drive goal" },
+  { icon: Users, value: "10+", label: "Volunteers", detail: "And growing every day" },
+  { icon: MapPin, value: "2", label: "Cities", detail: "Guntur & Hyderabad" },
+  { icon: Rocket, value: "1st", label: "Initiative", detail: "Eid Food Distribution" },
 ];
 
 export default function ImpactSection() {
@@ -22,32 +23,35 @@ export default function ImpactSection() {
       <div className="container-custom relative">
         <div className="mx-auto max-w-3xl text-center">
           <span className="inline-block rounded-full border border-white/10 bg-white/5 px-5 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-gold-400">
-            Our Impact
+            Our First Step
           </span>
           <h2 className="mt-8 font-display text-4xl font-bold text-white sm:text-5xl lg:text-6xl">
-            Numbers That{" "}
-            <span className="text-gradient-gold">Speak</span>
+            A Journey{" "}
+            <span className="text-gradient-gold">Begins</span>
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg text-white/40">
-            Every number represents a life changed, a family supported, and a
-            future made brighter.
+            We are just getting started — and we believe every great movement
+            begins with a single act of kindness. Here&apos;s where we stand today.
           </p>
         </div>
 
         <div className="mt-20 grid grid-cols-2 gap-6 md:grid-cols-4">
-          {stats.map((stat) => (
+          {goals.map((g) => (
             <div
-              key={stat.label}
+              key={g.label}
               className="group relative overflow-hidden rounded-3xl border border-white/[0.06] bg-white/[0.03] p-8 backdrop-blur-sm transition-all duration-500 hover:border-white/10 hover:bg-white/[0.06]"
             >
               <div className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-primary-500/5 transition-all duration-500 group-hover:bg-primary-500/10" />
-
-              <ImpactCounter
-                end={stat.end}
-                suffix={stat.suffix}
-                prefix={stat.prefix}
-                label={stat.label}
-              />
+              <div className="relative">
+                <g.icon className="h-7 w-7 text-gold-400" />
+                <p className="mt-5 font-display text-4xl font-bold text-white">
+                  {g.value}
+                </p>
+                <p className="mt-1.5 text-sm font-semibold text-white/60">
+                  {g.label}
+                </p>
+                <p className="mt-1 text-xs text-white/30">{g.detail}</p>
+              </div>
             </div>
           ))}
         </div>

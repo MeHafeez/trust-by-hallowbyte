@@ -3,27 +3,39 @@
 import { usePathname } from "next/navigation";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { SidebarProvider, useSidebar } from "./SidebarContext";
 
-const fullBleedPages = ["/"];
+function Content({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
+  const { expanded } = useSidebar();
+  const isAdmin = pathname.startsWith("/admin");
+
+  if (isAdmin) return <>{children}</>;
+
+  return (
+    <>
+      <Navbar />
+      <div
+        className=""
+        style={{ "--sidebar-w": expanded ? "256px" : "72px" } as React.CSSProperties}
+      >
+        <div className="lg:ml-[var(--sidebar-w)] transition-[margin] duration-300 ease-in-out">
+          <main>{children}</main>
+          <Footer />
+        </div>
+      </div>
+    </>
+  );
+}
 
 export default function ConditionalLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const pathname = usePathname();
-  const isAdmin = pathname.startsWith("/admin");
-  const isFullBleed = fullBleedPages.includes(pathname);
-
-  if (isAdmin) {
-    return <>{children}</>;
-  }
-
   return (
-    <>
-      <Navbar />
-      <main className={isFullBleed ? "" : "pt-20"}>{children}</main>
-      <Footer />
-    </>
+    <SidebarProvider>
+      <Content>{children}</Content>
+    </SidebarProvider>
   );
 }

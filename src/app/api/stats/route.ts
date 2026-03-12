@@ -23,7 +23,7 @@ export async function GET() {
       totalUrgentCases,
       totalFundsRaised,
       totalFundsRequired,
-      fundingProgress: Math.round((totalFundsRaised / totalFundsRequired) * 100),
+      fundingProgress: totalFundsRequired > 0 ? Math.round((totalFundsRaised / totalFundsRequired) * 100) : 0,
     },
     impact,
     categories: {

@@ -17,19 +17,19 @@ interface CaseCardProps {
 
 const categoryConfig = {
   medical: {
-    color: "bg-rose-500/10 text-rose-500",
-    gradient: "from-rose-500 to-rose-400",
-    bg: "from-rose-50 to-rose-100/50",
+    color: "bg-primary-600/10 text-primary-700",
+    gradient: "from-primary-600 to-primary-500",
+    bg: "from-primary-50 to-primary-100/60",
   },
   education: {
-    color: "bg-blue-500/10 text-blue-500",
-    gradient: "from-blue-500 to-blue-400",
-    bg: "from-blue-50 to-blue-100/50",
+    color: "bg-primary-600/10 text-primary-700",
+    gradient: "from-primary-600 to-primary-500",
+    bg: "from-primary-50 to-primary-100/60",
   },
   food: {
-    color: "bg-amber-500/10 text-amber-500",
-    gradient: "from-amber-500 to-amber-400",
-    bg: "from-amber-50 to-amber-100/50",
+    color: "bg-gold-500/15 text-gold-600",
+    gradient: "from-gold-600 to-gold-500",
+    bg: "from-gold-50 to-gold-100/60",
   },
 };
 
@@ -84,7 +84,7 @@ export default function CaseCard({
             {categoryLabels[category]}
           </span>
           {urgent && (
-            <span className="flex items-center gap-1.5 rounded-full bg-red-500 px-3.5 py-1.5 text-xs font-bold text-white shadow-lg shadow-red-500/30">
+            <span className="flex items-center gap-1.5 rounded-full bg-gold-500 px-3.5 py-1.5 text-xs font-bold text-white shadow-lg shadow-gold-500/30">
               <Clock className="h-3 w-3" />
               Urgent
             </span>

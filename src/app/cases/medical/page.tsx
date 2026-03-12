@@ -41,8 +41,8 @@ export default function MedicalCasesPage() {
             Medical Support
           </h1>
           <p className="mx-auto mt-4 max-w-xl text-red-100">
-            We cover hospital bills for patients whose families cannot afford
-            life-saving treatment. {medicalStats.urgentCases} urgent cases need immediate support.
+            We aim to cover hospital bills for patients whose families cannot
+            afford life-saving treatment. Medical support is coming soon.
           </p>
         </div>
       </section>
