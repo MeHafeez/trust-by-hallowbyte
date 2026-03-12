@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import {
   Heart,
@@ -71,8 +72,14 @@ function SidebarContent({
           onClick={onLinkClick}
           className="flex items-center gap-3 overflow-hidden"
         >
-          <div className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary-400 to-primary-700 shadow-lg shadow-primary-700/40">
-            <Heart className="h-5 w-5 text-white fill-white" />
+          <div className="relative flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-primary-400 to-primary-700 shadow-lg shadow-primary-700/40 overflow-hidden">
+            <Image
+              src="/images/logo.png"
+              alt="Fatima Rahma Foundation logo"
+              fill
+              sizes="40px"
+              className="object-contain rounded-xl"
+            />
             <div className="absolute inset-0 rounded-xl ring-1 ring-inset ring-white/20" />
           </div>
           <div
