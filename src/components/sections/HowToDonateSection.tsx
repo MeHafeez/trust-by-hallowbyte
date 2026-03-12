@@ -32,25 +32,25 @@ const steps = [
 const methods = [
   {
     icon: Smartphone,
-    label: "UPI Payment",
-    detail: "Google Pay, PhonePe, Paytm",
+    label: "Pay with UPI & QR",
+    detail: "Scan QR or use Google Pay, PhonePe, Paytm",
     color: "from-primary-600/10 to-primary-600/5",
     iconColor: "text-primary-700",
   },
-  {
-    icon: Building2,
-    label: "Bank Transfer",
-    detail: "Direct NEFT / RTGS / IMPS",
-    color: "from-primary-600/10 to-primary-600/5",
-    iconColor: "text-primary-700",
-  },
-  {
-    icon: Globe,
-    label: "Online Gateway",
-    detail: "Credit/Debit Card, Net Banking",
-    color: "from-gold-500/15 to-gold-500/5",
-    iconColor: "text-gold-600",
-  },
+  // { 
+  //   icon: Building2,
+  //   label: "Bank Transfer",
+  //   detail: "Direct NEFT / RTGS / IMPS",
+  //   color: "from-primary-600/10 to-primary-600/5",
+  //   iconColor: "text-primary-700",
+  // },
+  // {
+  //   icon: Globe,
+  //   label: "Online Gateway",
+  //   detail: "Credit/Debit Card, Net Banking",
+  //   color: "from-gold-500/15 to-gold-500/5",
+  //   iconColor: "text-gold-600",
+  // },
 ];
 
 export default function HowToDonateSection() {

@@ -32,7 +32,7 @@ const bankDetails: {
   upiId: "9885550459@pthdfc",
 };
 
-type PaymentMethod = "upi" | "bank" | "online";
+type PaymentMethod = "upi";
 
 export default function DonatePage() {
   const [amount, setAmount] = useState<number>(1000);
@@ -88,9 +88,10 @@ export default function DonatePage() {
                   ₹{(customAmount ? parseInt(customAmount) : amount).toLocaleString("en-IN")}
                 </p>
                 <p className="mt-4 text-sm text-gray-500">
-                  {method === "upi" && "Please complete the UPI payment using the details provided."}
-                  {method === "bank" && "Please transfer the amount to the bank account shared."}
-                  {method === "online" && "Your payment is being processed."}
+                  {method === "upi" &&
+                    "Please complete the UPI payment using the QR code or UPI ID provided."}
+                  {/* {method === "bank" && "Please transfer the amount to the bank account shared."} */}
+                  {/* {method === "online" && "Your payment is being processed."} */}
                 </p>
                 <p className="mt-6 text-sm text-gray-500">
                   A confirmation email will be sent to <strong>{donorEmail}</strong>.
@@ -329,9 +330,14 @@ export default function DonatePage() {
 
                   <div className="mt-8 grid gap-3 sm:grid-cols-3">
                     {[
-                      { key: "upi" as const, icon: Smartphone, label: "UPI", detail: "GPay, PhonePe, Paytm" },
-                      { key: "bank" as const, icon: Building2, label: "Bank Transfer", detail: "NEFT / RTGS / IMPS" },
-                      { key: "online" as const, icon: Globe, label: "Online", detail: "Card / Net Banking" },
+                      {
+                        key: "upi" as const,
+                        icon: Smartphone,
+                        label: "Pay with UPI & QR",
+                        detail: "Scan QR or use GPay, PhonePe, Paytm",
+                      },
+                      // { key: "bank" as const, icon: Building2, label: "Bank Transfer", detail: "NEFT / RTGS / IMPS" },
+                      // { key: "online" as const, icon: Globe, label: "Online", detail: "Card / Net Banking" },
                     ].map((m) => (
                       <button
                         key={m.key}
@@ -354,7 +360,9 @@ export default function DonatePage() {
                   <div className="mt-8 rounded-xl bg-warm-100 p-6">
                     {method === "upi" && (
                       <div>
-                        <h3 className="font-semibold text-gray-900">UPI Payment</h3>
+                        <h3 className="font-semibold text-gray-900">
+                          Pay with UPI & QR
+                        </h3>
                         <div className="mt-4 flex flex-col items-center gap-4">
                           <div className="overflow-hidden rounded-xl bg-white p-3 shadow-sm">
                             <Image
@@ -389,7 +397,7 @@ export default function DonatePage() {
                       </div>
                     )}
 
-                    {method === "bank" && (
+                    {/* {method === "bank" && (
                       <div>
                         <h3 className="font-semibold text-gray-900">Bank Transfer Details</h3>
                         <div className="mt-4 space-y-3">
@@ -417,9 +425,9 @@ export default function DonatePage() {
                           ))}
                         </div>
                       </div>
-                    )}
+                    )} */}
 
-                    {method === "online" && (
+                    {/* {method === "online" && (
                       <div className="text-center py-6">
                         <Globe className="mx-auto h-10 w-10 text-primary-500" />
                         <h3 className="mt-3 font-semibold text-gray-900">Online Payment Gateway</h3>
@@ -428,7 +436,7 @@ export default function DonatePage() {
                           the transaction via Credit Card, Debit Card, or Net Banking.
                         </p>
                       </div>
-                    )}
+                    )} */}
                   </div>
 
                   <div className="mt-8 flex gap-3">
